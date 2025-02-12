@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            background: url('https://img.freepik.com/free-photo/flat-lay-stationary-arrangement-desk-with-copy-space-coffee_23-2148404490.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: rgb(13, 97, 110);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 60px;
+            height: auto;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-size: 28px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(251, 254, 254);
+            background: rgba(18, 14, 14, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            font-size: 24px;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            background: blue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .portal-box {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+        /* About Us, Why Choose Us, and Explore Opportunities Sections */
+        section {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+        section h2 {
+            font-size: 36px;
+            color: rgb(16, 13, 13);
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 18px;
+            color: rgb(12, 9, 9);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .why-choose ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+        .why-choose li {
+            margin-bottom: 10px;
+            color: rgb(23, 17, 17);
+        }
+        .images-section img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .images-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg" alt="Job Portal Logo">
+            <h1>Job Portal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="dashboard-alex.html">Profile</a></li> <!-- This is where it links to the dashboard -->
+                <li><a href="#jobs">Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Find Your Dream Job!</h2>
+        <p>Connecting you to top job opportunities in your industry.</p>
+        <div>
+            <input type="text" placeholder="Search jobs...">
+            <button>Search</button>
+        </div>
+    </section>
+
+    <div class="portal-box" id="portal-box">
+        <p>Registration Successful!</p>
+        <button onclick="showPortal()">Go to Portal</button>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We are a leading job portal, connecting job seekers with top employers. Our mission is to help professionals find jobs that match their skills and aspirations.</p>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✔️ 1000+ Job Listings</li>
+            <li>✔️ Verified Companies</li>
+            <li>✔️ Career Guidance</li>
+            <li>✔️ Free Resume Assistance</li>
+        </ul>
+    </section>
+
+    <!-- Explore Opportunities Section -->
+    <section class="images-section">
+        <h2>Explore Opportunities</h2>
+        <ul>
+
+        <li><img src="https://c8.alamy.com/comp/MNCBXX/career-growth-career-development-career-advancement-in-the-design-of-information-related-to-professional-growth-3d-illustration-MNCBXX.jpg" alt="Career Growth"></li>
+        <li><img src="https://media.istockphoto.com/id/1443245439/photo/business-meeting-businesswoman-woman-office-portrait-job-career-happy-businessman-teamwork.jpg?s=612x612&w=0&k=20&c=1ZR02c1UKfGdBCNWzzKlrwrVZuEiOqnAKcKF4V_t038=" alt="Team Work"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZLkNSitD-qKa39wE0zyBtnzO8Dt6M1vvz-Q&s" alt="Interview Success"></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPortal() {
+            document.getElementById('portal-box').style.display = 'none';
+            document.getElementById('nav-links').innerHTML = '<li><a href="dashboard-alex.html">Profile</a></li><li><a href="#jobs" onclick="showJobs()">Jobs</a></li>';
+        }
+        function showJobs() {
+            document.getElementById('jobs').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
